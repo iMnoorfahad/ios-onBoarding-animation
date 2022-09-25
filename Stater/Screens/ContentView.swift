@@ -10,14 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("onBoarding") var isOnBoarding:Bool = true;
     var body: some View {
-        VStack {
-            if isOnBoarding {
-                OnboardingView()
-            }else {
-                HomeView()
-            }
+        if isOnBoarding {
+            OnboardingView()
+        }else {
+            HomeView()
         }
-        .padding()
     }
 }
 
