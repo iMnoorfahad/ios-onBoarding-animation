@@ -32,7 +32,7 @@ struct OnboardingView: View {
                         .transition(.opacity)
                         .id(titleHeading)
                     
-                    TextSubtitleView(text: "this is randame text here we are showing it's just normal as we are doing", color: .white, size: .title3,paddingType: .bottom, paddingSize: 10,fontWeight: .light)
+                    TextSubtitleView(text: "this is randame text here we are showing it's just normal as we are doing", color: .white, size: .title3,paddingType: .all, paddingSize: 0,fontWeight: .light)
                         .opacity(isAnimating ? 1 : 0)
                         .offset(y:isAnimating ? 0 : -40)
                         .animation(.easeOut(duration: 1), value: isAnimating)
@@ -151,7 +151,7 @@ struct OnboardingView: View {
                 .offset(y: isAnimating ? 0 : 40)
                 .animation(.easeOut(duration: 1), value: isAnimating)
                 
-            } //:VSTACK
+            }.padding() //:VSTACK
         }//:ZSTACK
         .onAppear(perform: {
             isAnimating = true

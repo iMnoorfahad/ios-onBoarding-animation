@@ -55,6 +55,7 @@ struct HomeView: View {
             .animation(.easeOut(duration: 0.40), value: isAnimating)
             Spacer()
         } //: VSTACK
+        .padding()
         .onAppear(perform: {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
